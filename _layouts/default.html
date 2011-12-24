@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>coveraje - a simple javascript code coverage tool</title>
+        <link type="text/css" rel="stylesheet" href="styles/common.css" />
+        <link type="text/css" rel="stylesheet" href="styles/pygments_colorful.css" />
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="cont">
+            <header class="header">
+                <hgroup>
+                    <h1>coveraje</h1>
+                    <h2>a simple javascript code coverage tool...</h2>
+                </hgroup>
+                
+                <nav>
+                    <a href="/" title="Overview">Home</a>
+                    {% for post in site.posts reversed %}
+                        <a href="{{ post.url }}" title="{{ post.alt }}">{{ post.title }}</a>
+                    {% endfor %}
+                    <a href="https://github.com/coveraje/coveraje" title="Fork me on github...">Source</a>
+                </nav>
+                
+                <aside class="hint">beta</aside>
+            </header>
+            
+            {{ content }}
+            
+            <footer class="footer"> 
+                &copy; 2011 <a href="http://klugesoftware.de/">Wolfgang Kluge</a> <a href="http://gehirnwindung.de/">gehirnwindung.de</a>
+            </footer> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b2 | 201101
+   NOTE: THIS IS A BETA VERSION (see previous line)
+   USE WITH CAUTION AND TEST WITH ABANDON */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**/
+
+body {
+    background-color: #e0e0e0;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, Verdana, sans-serif;
+    font-size: 10pt;
+    
+    /*reihenfolge ist entscheidend. erst w3c, dann IE9, dann die browser-spezifischen*/
+	/*in legacy.css für IE < 9 (filter)*/
+	background-image: linear-gradient(top, #efefef 130px, #ffffff 640px); /*W3C*/
+	background-image: url('data:image/svg+xml; base64, PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtdWNnZy1nZW5lcmF0ZWQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIxMzBweCIgc3RvcC1jb2xvcj0iI2VmZWZlZiIgc3RvcC1vcGFjaXR5PSIxIi8+PHN0b3Agb2Zmc2V0PSI2NDBweCIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPjwvc3ZnPg=='); /*IE 9*/
+	background-image: -moz-linear-gradient(top, #efefef 0%, #ffffff 640px); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(640px, #ffffff)); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, #efefef 130px, #ffffff 640px); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, #efefef 0%, #ffffff 640px); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(top, #efefef 0%, #ffffff 640px); /* IE10+ */
+    
+    background-attachment: fixed;
+}
+
+
+.cont {
+    width: 80%;
+    margin: 110px auto 0px auto;
+    min-width: 680px;
+    padding: 4px;
+    min-width: 680px;
+    padding: 4px;
+}
+
+.header {
+    position: fixed;
+    min-width: 680px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 90px;
+    background-color: #3D3D3D;
+    box-shadow: 0px 0px 10px #000;
+    z-index: 2;
+}
+
+.header hgroup {
+    box-shadow: 0px 0px 3px #fff inset, 0px 0px 10px #fff;
+    background-color: #000;
+    margin: 10px;
+    padding: 4px;
+    border-radius: 3px;
+}
+
+.header  nav {
+    margin: 10px;
+    padding: 2px;
+}
+.header a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.header nav a {
+    display: inline-block;
+    border-radius: 2px;
+    height: 18px;
+    margin: 2px;
+    line-height: 18px;
+    padding: 2px 2px 2px 2px;
+    text-shadow: -1px 1px 0px #000;
+    vertical-align: middle;
+}
+.header nav a.current {
+    color: #fff;
+    background-color: #F0A000;
+}
+.header nav a:hover {
+    color: #fff;
+    background-color: #929292;
+}
+
+header h1 {
+    display: inline;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px -1px 2px #000;
+}
+
+header h2 {
+    display: inline;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px -1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hint {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    color: #fff; /*5cd  EAFF4F*/ 
+    text-shadow: -1px -1px 10px #EAFF4F,
+                  0px -1px 10px #EAFF4F,
+                  1px -1px 10px #EAFF4F,
+                 -1px  1px 10px #EAFF4F,
+                  0px  1px 10px #EAFF4F,
+                  1px  1px 10px #EAFF4F,
+                 -1px  0px 10px #EAFF4F,
+                  1px  0px 10px #EAFF4F;
+}
+
+.post {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #e0e0e0;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.post a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.post h3 {
+    font-size: 1.2em;
+    xfont-weight: bold;
+    margin-bottom: 0.4em;
+    padding: 2px 2px 4px 2px;
+    color: #fff;
+    border: 1px solid #3399bb;
+    border-radius: 3px;
+    background-color: #55CCDD;
+    box-shadow: 0px 0px 2px #55CCDD ;
+}
+
+.post p {
+    padding-bottom: 1em;
+}
+
+.post code {
+    font-family: 'Bitstream Vera Sans Mono', Courier, monospace;
+    background-color: #f3f3f3;
+    border-radius: 2px;
+}
+
+pre {
+    font-family: 'Bitstream Vera Sans Mono', Courier, monospace;
+    background-color: #f3f3f3;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1em;
+    padding: 3px;
+    box-shadow: 0px 0px 5px #e0e0e0 inset;
+}
+
+.footer {
+    margin-top: 20px;
+    box-shadow: 0px 0px 2px #efefef;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: underline;
+}

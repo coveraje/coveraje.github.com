@@ -1,0 +1,25 @@
+---
+layout: post
+title: How it works
+alt: How coveraje works
+---
+
+<h3>How coveraje works</h3>
+<p>coveraje inspects the javascript source code and injects calls to internal helper functions. The injected code is used internal only. No modification of the original source code is needed.</p>
+<p>E.g. the code</p>
+{% highlight javascript %}
+test();
+var x = test2();
+{% endhighlight %}
+
+<p>is recreated as (simplified for demonstration)</p>
+
+{% highlight javascript %}
+visit(0, 4);
+test();
+var x = visitAndReturn(test2(), 16, 20);
+{% endhighlight %}
+
+<p>where <code>visit</code> and <code>visitAndReturn</code> are the helper funtions. The numbers are the position in the original file.
+With this, coveraje is able to show which parts are visited zero times, once, or more than once.</p>
+<p>There are special cases for branches and function parameters (and there will be more in the future), but the process is always the same.</p>
